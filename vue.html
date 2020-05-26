@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link type="text/css" href="vue.css" rel="stylesheet">
+</head>
+<body>
+
+    <!--
+        <div id="app-1">
+            {{ message }}
+        </div>
+    -->
+
+    <!--
+        <div id="app-2">
+            <span v-bind:title="message" v-bind:class="newClass">
+                Mueva el mouse sobre mí durante unos segundos
+                para ver mi título enlazado dinámicamente.
+            </span>
+        </div>
+    -->
+
+  <!--
+      <div id="app-3">
+          <span v-if="seen">Ahora me ves</span>
+        </div>
+  -->
+
+<!--
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+                {{ todo.desc }}
+            </li>
+        </ol>
+    </div>
+-->
+
+<!--
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Mensaje invertido</button>
+        <p>{{ mensaje2 }}</p>
+        <button v-on:click="loQueSea">Mensaje invertido</button>
+        <p>{{ mensajeCompleto }}</p>
+    </div>
+-->
+
+<!--
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+-->
+
+
+
+<div id="appForm">
+    <form class="search" @submit.prevent="addAlbum">
+        <label for="form">Image Of Album</label>
+        <input type="text" v-model="formData.imgAlbum">
+        <label for="form">Name Of Album</label>
+        <input type="text" v-model="formData.nameAlbum">
+        <br>
+        <label for="form">Image Of Artist</label>
+        <input type="text" v-model="formData.imgArtist">
+        <label for="form">Name Of Artist</label>
+        <input type="text" v-model="formData.nameArtist">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <ul>
+        <h1>Info Musical</h1>
+        <li v-for="item in lista">
+            <img class="cover" v-bind:src= item.imgAlbum>
+            <span class="title" v-bind="item.show">{{item.nameAlbum}}</span>
+            <img class="picture" v-bind:src=item.imgArtist>
+            <span class="name" v-bind="item.show">{{ item.nameArtist }}</span>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+  <script src="vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>
